@@ -1,0 +1,42 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string English;
+        Console.WriteLine("請輸入英文字串");
+        English = Console.ReadLine();
+        Console.WriteLine("您輸入資料為: " + English); 
+
+        bool startsWithVowel = StartsWithVowel(English);
+		
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+        switch (startsWithVowel)
+        {
+            case true:
+                English = English.ToUpper();
+                break;
+            default:
+                English = English.ToLower();
+                break;
+        }
+
+        Console.WriteLine("修改後的字母為: " + English);
+    }
+
+    static bool StartsWithVowel(string input)
+	{
+        input = input.ToLower();
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+        foreach (char vowel in vowels)
+        {
+            if (input.StartsWith(vowel.ToString()))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
