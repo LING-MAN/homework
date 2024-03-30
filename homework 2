@@ -8,7 +8,8 @@ class Program
 		 string str2= "hello";
 		if(str1.EndsWith("hello"))
 		{
-			 Console.WriteLine(str1.Replace("替換後的字串",str1));
+			Console.WriteLine(str1.EndsWith(str2).ToString());
+			Console.WriteLine(str1.Replace(str2,"替換後的字串"));
 		}
 		
 	   else
