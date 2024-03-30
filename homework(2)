@@ -1,0 +1,24 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+		 Console.WriteLine("请输入輸入字串1:");
+         string str1 = Console.ReadLine();
+		 Console.WriteLine("请输入輸入字串2:");
+         string str2 = Console.ReadLine();
+		if(str1.Length>str2.Length)
+		{
+			Console.WriteLine(String.Concat(str1,str2));
+		}
+		else
+		{
+			
+			int middleIndex = str1.Length / 2;
+            string result = str1.Insert(middleIndex, str2);
+			Console.WriteLine(result);
+			
+		}
+		
+	}
+}
